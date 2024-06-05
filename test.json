@@ -1,0 +1,79 @@
+{
+  "status": 0,
+  "data": {
+    "buyOrderId": "7d909519-7233-469d-91e7-a9a4ce386fdc",
+    "collectionContract": "0xcBCad2301A959ee617D61edb85DC733a980E070A",
+    "contract": "0x9ac4D9EE5c30339A24e1b784842E58f363F58458",
+    "inputDataShopCar": {
+      "orders": [
+        {
+          "parameters": {
+            "conduitKey": "0xE8B9a17Dc2F3792B57C88C62Db1dd561aF35722c000000000000000000000000",
+            "counter": 0,
+            "consideration": [
+              {
+                "itemType": 0,
+                "token": "0x0000000000000000000000000000000000000000",
+                "identifierOrCriteria": "0",
+                "startAmount": "9900000000000000000",
+                "endAmount": "9900000000000000000",
+                "recipient": "0xb197ca57784c4f51102f18443501f4859b7177cb"
+              },
+              {
+                "itemType": 0,
+                "token": "0x0000000000000000000000000000000000000000",
+                "identifierOrCriteria": "0",
+                "startAmount": "100000000000000000",
+                "endAmount": "100000000000000000",
+                "recipient": "0xE8B9a17Dc2F3792B57C88C62Db1dd561aF35722c"
+              }
+            ],
+            "endTime": "1720150694",
+            "offer": [
+              {
+                "itemType": 2,
+                "token": "0xcBCad2301A959ee617D61edb85DC733a980E070A",
+                "identifierOrCriteria": "2084",
+                "startAmount": "1",
+                "endAmount": "1"
+              }
+            ],
+            "offerer": "0xb197ca57784c4f51102f18443501f4859b7177cb",
+            "orderType": "0",
+            "salt": "01020133840314729824700159334234832617733752709687700857599819150233256493107",
+            "startTime": "1717558694",
+            "totalOriginalConsiderationItems": "2",
+            "zone": "0x0000000000000000000000000000000000000000",
+            "zoneHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "signature": "0x2de0e8b4f632ca3cbbf2f8caacb3420723d48652f55db59b29f975344af279527f1eadbf086aeeccb44e46ffa399a6af4a805577ebf64b5b7cb2a209144671071c"
+        }
+      ],
+      "offerFulfillments": [
+        [
+          {
+            "orderIndex": 0,
+            "itemIndex": 0
+          }
+        ]
+      ],
+      "considerationFulfillments": [
+        [
+          {
+            "orderIndex": 0,
+            "itemIndex": 0
+          }
+        ],
+        [
+          {
+            "orderIndex": 0,
+            "itemIndex": 1
+          }
+        ]
+      ],
+      "fulfillerConduitKey": "0xE8B9a17Dc2F3792B57C88C62Db1dd561aF35722c000000000000000000000000",
+      "maximumFulfilled": "1"
+    },
+    "price": 10000000000000000000
+  }
+}
