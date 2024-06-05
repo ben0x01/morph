@@ -18,13 +18,13 @@ export const moprhPublicClient = createPublicClient({
 
 export const holeskyWalletClient = createWalletClient({
     chain: holesky,
-    account: privateKeyToAccount('0x0e5f4a8cf5fb98c4453d336d274c56cadf5326078faa129c59cd8f2b14ef7f51'),
+    account: privateKeyToAccount('0xprivate'),
     transport: http(""),
 })
 
 export const morphWalletClient = createWalletClient({
     chain: morph,
-    account: privateKeyToAccount('0x0e5f4a8cf5fb98c4453d336d274c56cadf5326078faa129c59cd8f2b14ef7f51'),
+    account: privateKeyToAccount('0xprivate'),
     transport: http(""),
 })
 
