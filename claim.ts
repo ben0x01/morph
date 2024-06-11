@@ -85,11 +85,11 @@ async function claimETH() {
     try {
         const {request} = await holeskyPublicClient.simulateContract({
             abi: claimEthAbi,
-            address: '0x37088Ecc92Aa376F1535BD42186Efc3a92b39e65',
-            functionName: 'mint',
+            address: '0xECc966AB425F3F5Bd58085ce4eBDBf81D829126F',
+            functionName: 'proveAndRelayMessage',
             args: await fetchProof(),
             account: account,
-            value: BigInt('0'),
+            value: BigInt('0.01'),
         }).catch((error: any) => {
             console.error("Simulation error:", error);
             throw error;
