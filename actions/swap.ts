@@ -27,9 +27,9 @@ const headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0",
 };
 
-export const getCallData = async (address: string, amount: string) => {
+export const getCallData = async (address: string, amount: string, fromToken: string, toToken: string) => {
     try {
-        const url = `https://newapi.native.org/v1/firm-quote?src_chain=morph_holesky_testnet&dst_chain=morph_holesky_testnet&token_in=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&token_out=0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98&amount=${amount}&address=${address}&slippage=0.5`;
+        const url = `https://newapi.native.org/v1/firm-quote?src_chain=morph_holesky_testnet&dst_chain=morph_holesky_testnet&token_in=${fromToken}&token_out=${toToken}&amount=${amount}6&address=${address}&slippage=0.5`;
         const response = await axios.get(url, {headers});
         console.log("API URL:", url);
         return response.data["txRequest"]["calldata"];
@@ -41,7 +41,7 @@ export const getCallData = async (address: string, amount: string) => {
 
 async function test() {
     try {
-        const callData = await getCallData("0xD09e83f426edfCA98cf640eBa94380A57b19aD16", "0.005");
+        const callData = await getCallData("0xD09e83f426edfCA98cf640eBa94380A57b19aD16", "0.005", "0x340Bad9627Cb72d1c4cC92c7F53c4995454130Ae", "0x5300000000000000000000000000000000000011");
         console.log("Call Data - ", callData)
         const gas = await moprhPublicClient.estimateGas({
             data: callData,
