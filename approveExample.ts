@@ -8,11 +8,11 @@ import {parseEther, toHex} from "viem";
 //weth address - 0x5300000000000000000000000000000000000011
 
 
-async function withdrawMorph() {
+async function withdrawMorph(address: string) {
     const hash = await morphWalletClient.sendTransaction({
         account,
         chain: morph,
-        to: "0x340Bad9627Cb72d1c4cC92c7F53c4995454130Ae", //changes address for token
+        to: `f{address}`, //changes address for token
         value: BigInt('0'),
         data: toHex('0x095ea7b300000000000000000000000051be46170069a77050be5273d34e6155fdb7e031ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'),  //change address
     });
